@@ -26,7 +26,7 @@ router.route('/hello')
   .post(function(req, res){
     var hello = new Hello();
     hello.name = req.body.name;
-    hello.message = req.body.message;
+    hello.msg = req.body.msg;
 
     hello.save(function(err){
       if(err)
