@@ -3,9 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 
 //base setup
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/mongotest');
- var Hello = require('./models/hello');
+//var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost:27017/mongotest');
+//var Hello = require('./models/hello');
 
 //------
 app.use(bodyParser.urlencoded({extended:true}));
@@ -22,6 +22,7 @@ router.get('/', function(req, res){
 
 //routes
 
+/*
 router.route('/hello')
   .post(function(req, res){
     var hello = new Hello();
@@ -41,7 +42,7 @@ router.route('/hello')
       res.json(hellos);
     });
   });
-
+*/
 app.use('/api', router);
 
 app.listen(port);
